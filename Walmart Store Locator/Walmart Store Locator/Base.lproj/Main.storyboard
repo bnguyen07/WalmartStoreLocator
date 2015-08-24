@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Walmart_Store_Locator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,82 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XJf-2r-KiA">
+                                <rect key="frame" x="114" y="31" width="470" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3a-cC-dCb">
+                                <rect key="frame" x="28" y="35" width="78" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="0qQ-ig-Sc2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or ZIP code" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fe-Uw-TfX">
+                                <rect key="frame" x="16" y="77" width="90" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="dZt-ie-bDb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c9M-ls-GoY">
+                                <rect key="frame" x="114" y="73" width="470" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hwX-2c-BAk">
+                                <rect key="frame" x="16" y="164" width="568" height="416"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Boe-yN-ynN">
+                                <rect key="frame" x="58" y="117" width="48" height="30"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SearchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T9k-hP-ZZW"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c9M-ls-GoY" firstAttribute="top" secondItem="XJf-2r-KiA" secondAttribute="bottom" constant="12" id="0MV-Da-9RP"/>
+                            <constraint firstItem="XJf-2r-KiA" firstAttribute="trailing" secondItem="c9M-ls-GoY" secondAttribute="trailing" id="B9O-3J-mGA"/>
+                            <constraint firstItem="c9M-ls-GoY" firstAttribute="leading" secondItem="XJf-2r-KiA" secondAttribute="leading" id="Eel-Pe-HLb"/>
+                            <constraint firstItem="c9M-ls-GoY" firstAttribute="trailing" secondItem="hwX-2c-BAk" secondAttribute="trailing" id="JzQ-2c-FUY"/>
+                            <constraint firstItem="c9M-ls-GoY" firstAttribute="leading" secondItem="5fe-Uw-TfX" secondAttribute="trailing" constant="8" symbolic="YES" id="VPz-JQ-4fn"/>
+                            <constraint firstItem="XJf-2r-KiA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="11" id="YcA-jo-QJe"/>
+                            <constraint firstItem="I3a-cC-dCb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="ajY-Sy-VTt"/>
+                            <constraint firstAttribute="bottom" secondItem="hwX-2c-BAk" secondAttribute="bottom" constant="20" symbolic="YES" id="cDs-A4-ce6"/>
+                            <constraint firstItem="I3a-cC-dCb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="e2w-pP-Chu"/>
+                            <constraint firstItem="5fe-Uw-TfX" firstAttribute="leading" secondItem="hwX-2c-BAk" secondAttribute="leading" id="fJj-36-T8e"/>
+                            <constraint firstItem="hwX-2c-BAk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="maC-L3-vtZ"/>
+                            <constraint firstItem="Boe-yN-ynN" firstAttribute="top" secondItem="5fe-Uw-TfX" secondAttribute="bottom" constant="19" id="mob-0S-cSS"/>
+                            <constraint firstItem="5fe-Uw-TfX" firstAttribute="top" secondItem="I3a-cC-dCb" secondAttribute="bottom" constant="21" id="n6j-zG-5M0"/>
+                            <constraint firstItem="XJf-2r-KiA" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="oVh-b2-iSF"/>
+                            <constraint firstItem="XJf-2r-KiA" firstAttribute="leading" secondItem="I3a-cC-dCb" secondAttribute="trailing" constant="8" symbolic="YES" id="pSU-fz-c0I"/>
+                            <constraint firstItem="Boe-yN-ynN" firstAttribute="trailing" secondItem="5fe-Uw-TfX" secondAttribute="trailing" id="s4J-j3-NSN"/>
+                            <constraint firstItem="hwX-2c-BAk" firstAttribute="top" secondItem="Boe-yN-ynN" secondAttribute="bottom" constant="17" id="xJc-Zm-vTW"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="CityNameTextBox" destination="XJf-2r-KiA" id="8VI-AI-yMO"/>
+                        <outlet property="LocationsTextView" destination="hwX-2c-BAk" id="Htb-0f-HTK"/>
+                        <outlet property="ZIPcodeTextBox" destination="c9M-ls-GoY" id="Og8-1E-PJI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="359" y="342"/>
         </scene>
     </scenes>
 </document>
